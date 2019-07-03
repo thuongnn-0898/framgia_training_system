@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  course: one
+  status: 1
+  date_start: 2019-07-03 14:57:44
+  date_end: 2019-07-03 14:57:44
+  role: 1
+
+two:
+  user: two
+  course: two
+  status: 1
+  date_start: 2019-07-03 14:57:44
+  date_end: 2019-07-03 14:57:44
+  role: 1
