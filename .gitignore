@@ -13,9 +13,11 @@
 !/log/.keep
 !/tmp/.keep
 
+
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+.idea/
 
 /node_modules
 /yarn-error.log
@@ -26,3 +28,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/database.yml
+
+# Ignore application configuration
+/config/application.yml
