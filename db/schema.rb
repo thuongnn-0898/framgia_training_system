@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_07_03_075806) do
 
-  create_table "course_subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "course_subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "subject_id"
     t.integer "status"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.index ["subject_id"], name: "index_course_subjects_on_subject_id"
   end
 
-  create_table "course_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "course_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "course_id"
     t.integer "status"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.index ["user_id"], name: "index_course_users_on_user_id"
   end
 
-  create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.integer "duration"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "progress_user_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "progress_user_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "subject_user_id"
     t.bigint "subject_task_id"
     t.integer "status"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.index ["subject_user_id"], name: "index_progress_user_tasks_on_subject_user_id"
   end
 
-  create_table "subject_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "subject_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "subject_id"
     t.bigint "task_id"
     t.datetime "created_at", null: false
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.index ["task_id"], name: "index_subject_tasks_on_task_id"
   end
 
-  create_table "subject_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "subject_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "course_user_id"
     t.bigint "course_subject_id"
     t.integer "status"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.index ["course_user_id"], name: "index_subject_users_on_course_user_id"
   end
 
-  create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "picture"
@@ -82,13 +82,13 @@ ActiveRecord::Schema.define(version: 2019_07_03_075806) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.integer "role"
