@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+        <h3>Course list is participating</h3>
+        <%= link_to "Create new user",new_user_path, class: "btn btn-success" %>
+        <thead>
+          <tr>
+            <th>Stt</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Thuong</td>
+            <td>nguyen.ngoc.thuong@gmail.com</td>
+            <td>
+              <a href="#" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+              <a href="#myModal" class="btn btn-danger" data-toggle="modal"><i class="fa fa-remove"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog modal-confirm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="icon-box">
+          <i class="fa fa-remove"></i>
+        </div>
+        <h4 class="modal-title">Are you sure?</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete these records? This process cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<%= stylesheet_link_tag "sup_user" %>
