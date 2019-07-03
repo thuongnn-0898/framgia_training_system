@@ -7,13 +7,22 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %>
 </head>
 
 <body>
-  <%= render "layouts/nav" %>
-  <div class="container">
-    <%= yield %>
+  <div class="wrapper">
+    <% role = "supe1rvisor"
+    if role == "supervisor" %>
+    <%= render "layouts/sidebar" %>
+    <% else %>
+    <%= render "layouts/nav" %>
+    <% end %>
+    <div class="container">
+      <%= render "layouts/shared/flash_messages" %>
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </div>
-<%= render "layouts/footer" %>
 </body>
 </html>

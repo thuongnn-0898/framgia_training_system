@@ -1,1 +1,4 @@
-length_minimum: 6
+fullname_length_maximum: 140
+email_length_minimum: 10
+email_length_maximum: 250
+password_length_minimum: 6
