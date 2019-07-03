@@ -1,2 +1,12 @@
 en:
-  hello: "Hello world"
+  title: "FRAMGIA TRAINING SYSTEM"
+  session:
+    login: "Please sign in"
+    btn: "Login"
+    remember: "Remember me"
+  page:
+    home: "Home"
+    courses: "All Course"
+    login: "Login"
+    profile: "Profile"
+    logout: "Logout"
