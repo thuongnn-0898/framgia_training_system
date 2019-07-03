@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject_user: one
+  subject_task: one
+  status: 1
+
+two:
+  subject_user: two
+  subject_task: two
+  status: 1

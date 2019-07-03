@@ -2,10 +2,18 @@
 
 one:
   email: MyString
-  name: MyString
   password_digest: MyString
+  role: 1
+  fullname: MyString
+  birthday: 2019-07-03
+  gender: 1
+  avatar: MyString
 
 two:
   email: MyString
-  name: MyString
   password_digest: MyString
+  role: 1
+  fullname: MyString
+  birthday: 2019-07-03
+  gender: 1
+  avatar: MyString
