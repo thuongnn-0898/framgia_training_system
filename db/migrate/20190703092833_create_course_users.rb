@@ -1,8 +1,8 @@
 class CreateCourseUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :course_users do |t|
-      t.references :user, foreign_key: true
-      t.references :course, foreign_key: true
+      t.integer :user_id
+      t.integer :course_id
       t.integer :status
       t.datetime :date_start
       t.datetime :date_end
@@ -10,5 +10,10 @@ class CreateCourseUsers < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :course_users, :user_id
+    add_index :course_users, :course_id
+
+    add_index :course_users, [:user_id, :course_id], unique: true
   end
 end

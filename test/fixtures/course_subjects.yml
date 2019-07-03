@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  course: one
-  subject: one
+  course_id: 1
+  subject_id: 1
   status: 1
 
 two:
-  course: two
-  subject: two
+  course_id: 1
+  subject_id: 1
   status: 1

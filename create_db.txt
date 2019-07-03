@@ -1,0 +1,9 @@
+rails g model User email:string password_digest:string role:integer fullname:string birthday:date gender:integer avatar:string
+rails g model Course name:string description:text duration:integer duration_type:integer picture:string
+rails g model Subject name:string description:text picture:string
+rails g model Task name:string
+rails g model CourseUser user_id:integer course_id:integer status:integer date_start:datetime date_end:datetime role:integer
+rails g model CourseSubject course_id:integer subject_id:integer status:integer
+rails g model SubjectTask subject_id:integer task_id:integer
+rails g model SubjectUser course_user_id:integer course_subject_id:integer status:integer
+rails g model ProgressUserTask subject_user_id:integer subject_task_id:integer status:integer
