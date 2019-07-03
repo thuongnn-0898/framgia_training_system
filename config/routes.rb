@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get "/", to: "application#index"
+  root "session#new"
+  get "profile", to: "user#show"
 end
