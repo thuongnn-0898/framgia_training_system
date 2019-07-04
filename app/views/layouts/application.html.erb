@@ -5,23 +5,23 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %>
 </head>
 
 <body>
   <div class="wrapper">
-    <% role = "supe1rvisor"
-    if role == "supervisor" %>
+    <% if current_user and current_user.role == 1 %>
     <%= render "layouts/sidebar" %>
     <% else %>
     <%= render "layouts/nav" %>
     <% end %>
     <div class="container">
+      <%= render "shared/error" if !flash.empty? %>
       <%= yield %>
     </div>
-    <%= render "layouts/footer" %>
+
   </div>
 </body>
 </html>

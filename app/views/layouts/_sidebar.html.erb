@@ -1,11 +1,12 @@
 <nav id="sidebar" class="">
     <div class="sidebar-header">
-        <h3>Supervisor Page</h3>
+        <h3><%= t "page.sup_visor" %></h3>
     </div>
 
     <ul class="list-unstyled components">
         <li class="active">
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Course</a>
+            <%= link_to t("page.course"),"#homeSubmenu",class: "dropdown-toggle",data: {toggle: "collapse"},aria: {expanded: false} %>
             <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
                     <a href="#">Add Course</a>
@@ -53,7 +54,8 @@
             <a href="" class="download">Profile</a>
         </li>
         <li>
-            <a href="" class="article">Logout</a>
+            <%= link_to t("page.logout"), logout_path, method: :delete, class: "article"%>
         </li>
     </ul>
 </nav>
+<%= stylesheet_link_tag "sup_user" %>
