@@ -7,5 +7,6 @@ Bundler.require(*Rails.groups)
 module ProjectName
   class Application < Rails::Application
     config.load_defaults 5.2
+    config.assets.precompile += %w( user.js )
   end
 end

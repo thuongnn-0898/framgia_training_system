@@ -1,10 +1,10 @@
 class User < ApplicationRecord
 
   enum role_types: [:trainee, :suppervisor]
-  enum gender_types: [:male, :female]
+  enum gender_types: {male: 1, female: 0}
 
-  has_many :course_users, dependent: :destroy
-  has_many :course_subjects, dependent: :destroy
+  has_many :course_users
+  has_many :course_subjects
 
   validates :fullname, presence: true,
     length: {maximum: Settings.fullname_length_maximum}
@@ -17,7 +17,12 @@ class User < ApplicationRecord
   validates :password, length: {minimum: Settings.password_length_minimum},
     allow_nil: true
 
+  mount_uploader :avatar, PictureUploader
+
   has_secure_password
+
+  scope :newest, ->{order id: :desc}
+
 
   class << self
     def role_types_i18n

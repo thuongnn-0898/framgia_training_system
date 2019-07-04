@@ -48,3 +48,12 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+ /* table */
+table.verticalalign tbody tr td {
+  vertical-align: middle;
+}
+
+.avatar-size{
+  width: 100px;
+}

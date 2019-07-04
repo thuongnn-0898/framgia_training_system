@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "profile", to: "user#show"
   scope :supervisor do
-    resources :user
-    post "/user/create", to: "user#create"
+    resources :users
+    # post "/user/create", to: "user#create"
   end
 end
