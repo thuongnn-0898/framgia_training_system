@@ -1,4 +1,5 @@
 class SessionController < ApplicationController
+  before_action :check_login , only: :new
   def new;end
 
   def create
@@ -15,6 +16,9 @@ class SessionController < ApplicationController
   end
 
   def destroy
-
+    session.delete(:user_id)
+    @current_user = nil
+    flash[:success] = "Logout success"
+    redirect_to root_path
   end
 end

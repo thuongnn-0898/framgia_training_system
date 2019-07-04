@@ -7,4 +7,8 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def role_name user
+    user.role == 1 ? "Supervisor" : "Trainee"
+  end
 end
